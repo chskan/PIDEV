@@ -1,0 +1,29 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+App_bon_plan_layout:
+    path:     /layout
+    defaults: { _controller: AppBundle:BonPlan:layout }
+App_bon_plan_home:
+    path:     /home
+    defaults: { _controller: AppBundle:BonPlan:home }
+App_bon_plan_list_restaurant:
+    path:     /list_restaurant
+    defaults: { _controller: AppBundle:BonPlan:list_restaurant }
+App_bon_plan_list_hotels:
+    path:     /list_hotels
+    defaults: { _controller: AppBundle:BonPlan:list_hotels }
+App_bon_plan_list_beate_et_bien_etre:
+    path:     /list_beaute_et_bien_etre
+    defaults: { _controller: AppBundle:BonPlan:list_beaute_et_bien_etre }
+App_bon_plan_blog:
+    path:     /blog
+    defaults: { _controller: AppBundle:BonPlan:blog }
+App_bon_plan_contact:
+    path:     /contact
+    defaults: { _controller: AppBundle:BonPlan:contact }
+App_bon_plan_deals:
+    path:     /deals
+    defaults: { _controller: AppBundle:BonPlan:deals }

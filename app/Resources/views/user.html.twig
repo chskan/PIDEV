@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+{% block title %} Info profil {% endblock %}
+{% block transparant %} {% endblock %}
+{% block styleheader %} style="opacity:0.9" {% endblock %}
+{% block body %}
+    <section>
+<h1>Information Profil</h1>
+<p>Bienvenue:</p>
+{% if is_granted('ROLE_ADMIN') %}
+<b>Si l'admin</b>
+{% endif %}
+    {% if is_granted('ROLE_USER') %}
+    <b>Monsieur le  Client</b>
+{% endif %}
+<p>Vos Informations </p>
+    <ul>
+        <li> ID : {{ app.user.id }}</li>
+        <li> Username : {{ app.user.username }}</li>
+        <li> Nom : {{ app.user.nom }}</li>
+        <li> Prenom: {{ app.user.prenom }}</li>
+        <li> Email : {{ app.user.email }}</li>
+
+    </ul>
+
+    <p><a href="{{ path('fos_user_security_logout') }}">Se Deconnecter</a> </p>
+    </section>
+{% endblock %}
